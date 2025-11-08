@@ -1,6 +1,6 @@
 {
   "name": "@formmorf/builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Enterprise React form builder library with drag-and-drop functionality, responsive previews, and comprehensive validation",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -49,9 +49,9 @@
     "directory": "packages/builder"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/formmorf/issues"
+    "url": "https://github.com/Mkaifkazi/formmorf/issues"
   },
-  "homepage": "https://github.com/yourusername/formmorf#readme",
+  "homepage": "https://formmorf-website.vercel.app/",
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/sortable": "^10.0.0",
