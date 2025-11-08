@@ -10,7 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@formmorf/builder": "workspace:*",
+    "@formmorf/builder": "^1.0.1",
+    "immer": "^10.1.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
