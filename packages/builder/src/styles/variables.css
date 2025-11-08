@@ -1,0 +1,266 @@
+/* ========================================
+   FormMorf Design System Variables
+   ======================================== */
+
+:root {
+  /* ========== Colors ========== */
+
+  /* Primary Colors */
+  --fm-primary-50: #eff6ff;
+  --fm-primary-100: #dbeafe;
+  --fm-primary-200: #bfdbfe;
+  --fm-primary-300: #93c5fd;
+  --fm-primary-400: #60a5fa;
+  --fm-primary-500: #3b82f6;
+  --fm-primary-600: #2563eb;
+  --fm-primary-700: #1d4ed8;
+  --fm-primary-800: #1e40af;
+  --fm-primary-900: #1e3a8a;
+
+  /* Secondary Colors (Purple) */
+  --fm-secondary-50: #f5f3ff;
+  --fm-secondary-100: #ede9fe;
+  --fm-secondary-200: #ddd6fe;
+  --fm-secondary-300: #c4b5fd;
+  --fm-secondary-400: #a78bfa;
+  --fm-secondary-500: #8b5cf6;
+  --fm-secondary-600: #7c3aed;
+  --fm-secondary-700: #6d28d9;
+  --fm-secondary-800: #5b21b6;
+  --fm-secondary-900: #4c1d95;
+
+  /* Success Colors (Green) */
+  --fm-success-50: #f0fdf4;
+  --fm-success-100: #dcfce7;
+  --fm-success-200: #bbf7d0;
+  --fm-success-300: #86efac;
+  --fm-success-400: #4ade80;
+  --fm-success-500: #22c55e;
+  --fm-success-600: #16a34a;
+  --fm-success-700: #15803d;
+  --fm-success-800: #166534;
+  --fm-success-900: #14532d;
+
+  /* Warning Colors (Amber) */
+  --fm-warning-50: #fffbeb;
+  --fm-warning-100: #fef3c7;
+  --fm-warning-200: #fde68a;
+  --fm-warning-300: #fcd34d;
+  --fm-warning-400: #fbbf24;
+  --fm-warning-500: #f59e0b;
+  --fm-warning-600: #d97706;
+  --fm-warning-700: #b45309;
+  --fm-warning-800: #92400e;
+  --fm-warning-900: #78350f;
+
+  /* Error/Danger Colors (Red) */
+  --fm-error-50: #fef2f2;
+  --fm-error-100: #fee2e2;
+  --fm-error-200: #fecaca;
+  --fm-error-300: #fca5a5;
+  --fm-error-400: #f87171;
+  --fm-error-500: #ef4444;
+  --fm-error-600: #dc2626;
+  --fm-error-700: #b91c1c;
+  --fm-error-800: #991b1b;
+  --fm-error-900: #7f1d1d;
+
+  /* Neutral/Gray Colors */
+  --fm-gray-50: #f8fafc;
+  --fm-gray-100: #f1f5f9;
+  --fm-gray-200: #e2e8f0;
+  --fm-gray-300: #cbd5e1;
+  --fm-gray-400: #94a3b8;
+  --fm-gray-500: #64748b;
+  --fm-gray-600: #475569;
+  --fm-gray-700: #334155;
+  --fm-gray-800: #1e293b;
+  --fm-gray-900: #0f172a;
+
+  /* Base Colors */
+  --fm-white: #ffffff;
+  --fm-black: #000000;
+
+  /* ========== Semantic Colors ========== */
+
+  /* Background Colors */
+  --fm-bg-primary: var(--fm-white);
+  --fm-bg-secondary: var(--fm-gray-50);
+  --fm-bg-tertiary: var(--fm-gray-100);
+  --fm-bg-hover: var(--fm-gray-50);
+  --fm-bg-active: var(--fm-primary-50);
+  --fm-bg-disabled: var(--fm-gray-100);
+
+  /* Text Colors */
+  --fm-text-primary: var(--fm-gray-900);
+  --fm-text-secondary: var(--fm-gray-700);
+  --fm-text-tertiary: var(--fm-gray-500);
+  --fm-text-placeholder: var(--fm-gray-400);
+  --fm-text-disabled: var(--fm-gray-400);
+  --fm-text-inverse: var(--fm-white);
+
+  /* Border Colors */
+  --fm-border-default: var(--fm-gray-200);
+  --fm-border-hover: var(--fm-gray-300);
+  --fm-border-focus: var(--fm-primary-500);
+  --fm-border-error: var(--fm-error-500);
+  --fm-border-success: var(--fm-success-500);
+
+  /* ========== Typography ========== */
+
+  /* Font Families */
+  --fm-font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --fm-font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+
+  /* Font Sizes */
+  --fm-text-xs: 0.75rem;    /* 12px */
+  --fm-text-sm: 0.8125rem;  /* 13px */
+  --fm-text-base: 0.875rem; /* 14px */
+  --fm-text-lg: 1rem;       /* 16px */
+  --fm-text-xl: 1.25rem;    /* 20px */
+  --fm-text-2xl: 1.5rem;    /* 24px */
+  --fm-text-3xl: 1.875rem;  /* 30px */
+
+  /* Font Weights */
+  --fm-font-normal: 400;
+  --fm-font-medium: 500;
+  --fm-font-semibold: 600;
+  --fm-font-bold: 700;
+
+  /* Line Heights */
+  --fm-leading-none: 1;
+  --fm-leading-tight: 1.25;
+  --fm-leading-snug: 1.375;
+  --fm-leading-normal: 1.5;
+  --fm-leading-relaxed: 1.625;
+  --fm-leading-loose: 2;
+
+  /* ========== Spacing ========== */
+
+  --fm-spacing-0: 0;
+  --fm-spacing-1: 0.25rem;  /* 4px */
+  --fm-spacing-2: 0.5rem;   /* 8px */
+  --fm-spacing-3: 0.75rem;  /* 12px */
+  --fm-spacing-4: 1rem;     /* 16px */
+  --fm-spacing-5: 1.25rem;  /* 20px */
+  --fm-spacing-6: 1.5rem;   /* 24px */
+  --fm-spacing-8: 2rem;     /* 32px */
+  --fm-spacing-10: 2.5rem;  /* 40px */
+  --fm-spacing-12: 3rem;    /* 48px */
+  --fm-spacing-16: 4rem;    /* 64px */
+
+  /* ========== Border Radius ========== */
+
+  --fm-radius-none: 0;
+  --fm-radius-sm: 0.125rem;  /* 2px */
+  --fm-radius-base: 0.25rem; /* 4px */
+  --fm-radius-md: 0.375rem;  /* 6px */
+  --fm-radius-lg: 0.5rem;    /* 8px */
+  --fm-radius-xl: 0.75rem;   /* 12px */
+  --fm-radius-2xl: 1rem;     /* 16px */
+  --fm-radius-full: 9999px;
+
+  /* ========== Shadows ========== */
+
+  --fm-shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --fm-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --fm-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --fm-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --fm-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --fm-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --fm-shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  --fm-shadow-focus: 0 0 0 3px rgba(59, 130, 246, 0.1);
+
+  /* ========== Z-Index ========== */
+
+  --fm-z-0: 0;
+  --fm-z-10: 10;
+  --fm-z-20: 20;
+  --fm-z-30: 30;
+  --fm-z-40: 40;
+  --fm-z-50: 50;
+  --fm-z-dropdown: 100;
+  --fm-z-sticky: 200;
+  --fm-z-fixed: 300;
+  --fm-z-modal: 400;
+  --fm-z-popover: 500;
+  --fm-z-tooltip: 600;
+  --fm-z-notification: 700;
+
+  /* ========== Transitions ========== */
+
+  --fm-transition-fast: 150ms;
+  --fm-transition-base: 200ms;
+  --fm-transition-slow: 300ms;
+  --fm-transition-slower: 500ms;
+
+  --fm-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --fm-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --fm-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ========== Component Specific ========== */
+
+  /* Toolbar */
+  --fm-toolbar-height: 48px;
+  --fm-toolbar-bg: var(--fm-bg-primary);
+  --fm-toolbar-border: var(--fm-border-default);
+
+  /* Sidebar Panels */
+  --fm-panel-width: 280px;
+  --fm-panel-bg: var(--fm-bg-secondary);
+  --fm-panel-header-bg: var(--fm-bg-primary);
+
+  /* Form Canvas */
+  --fm-canvas-bg: var(--fm-bg-tertiary);
+  --fm-canvas-field-bg: var(--fm-bg-primary);
+  --fm-canvas-field-border: var(--fm-border-default);
+  --fm-canvas-field-hover-border: var(--fm-border-hover);
+  --fm-canvas-field-selected-border: var(--fm-border-focus);
+
+  /* Buttons */
+  --fm-btn-primary-bg: var(--fm-primary-500);
+  --fm-btn-primary-hover-bg: var(--fm-primary-600);
+  --fm-btn-primary-text: var(--fm-white);
+
+  --fm-btn-secondary-bg: var(--fm-gray-100);
+  --fm-btn-secondary-hover-bg: var(--fm-gray-200);
+  --fm-btn-secondary-text: var(--fm-gray-700);
+
+  --fm-btn-danger-bg: var(--fm-error-500);
+  --fm-btn-danger-hover-bg: var(--fm-error-600);
+  --fm-btn-danger-text: var(--fm-white);
+
+  /* Form Fields */
+  --fm-field-bg: var(--fm-bg-primary);
+  --fm-field-border: var(--fm-border-default);
+  --fm-field-focus-border: var(--fm-border-focus);
+  --fm-field-error-border: var(--fm-border-error);
+  --fm-field-disabled-bg: var(--fm-bg-disabled);
+  --fm-field-disabled-text: var(--fm-text-disabled);
+}
+
+/* Dark Theme (can be activated with a class on root) */
+.dark-theme {
+  /* Background Colors */
+  --fm-bg-primary: var(--fm-gray-900);
+  --fm-bg-secondary: var(--fm-gray-800);
+  --fm-bg-tertiary: var(--fm-gray-700);
+  --fm-bg-hover: var(--fm-gray-700);
+  --fm-bg-active: var(--fm-primary-900);
+
+  /* Text Colors */
+  --fm-text-primary: var(--fm-gray-100);
+  --fm-text-secondary: var(--fm-gray-300);
+  --fm-text-tertiary: var(--fm-gray-400);
+  --fm-text-placeholder: var(--fm-gray-500);
+
+  /* Border Colors */
+  --fm-border-default: var(--fm-gray-700);
+  --fm-border-hover: var(--fm-gray-600);
+
+  /* Component Specific */
+  --fm-canvas-bg: var(--fm-gray-800);
+  --fm-canvas-field-bg: var(--fm-gray-900);
+  --fm-panel-bg: var(--fm-gray-800);
+  --fm-panel-header-bg: var(--fm-gray-900);
+}

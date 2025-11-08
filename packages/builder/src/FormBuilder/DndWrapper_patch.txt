@@ -1,0 +1,20 @@
+40a41
+>   const lastPointerPosRef = React.useRef<{ x: number; y: number }>({ x: 0, y: 0 });
+51a53,64
+>   // Track mouse position globally during drag
+>   React.useEffect(() => {
+>     const handleMouseMove = (e: MouseEvent) => {
+>       if (activeId) {
+>         lastPointerPosRef.current = { x: e.clientX, y: e.clientY };
+>       }
+>     };
+>
+>     if (activeId) {
+>       window.addEventListener('mousemove', handleMouseMove);
+>       return () => window.removeEventListener('mousemove', handleMouseMove);
+>     }
+>   }, [activeId]);
+87c100
+<             const pointerY = (event.activatorEvent as any)?.clientY || 0;
+---
+>             const pointerY = lastPointerPosRef.current.y;

@@ -1,0 +1,88 @@
+{
+  "id": "contact-form-123",
+  "title": "Contact Form",
+  "description": "Get in touch with our team",
+  "fields": [
+    {
+      "id": "field-1",
+      "type": "text",
+      "label": "Full Name",
+      "name": "fullName",
+      "placeholder": "Enter your full name",
+      "required": true,
+      "validation": {
+        "required": true,
+        "minLength": 2,
+        "maxLength": 100
+      }
+    },
+    {
+      "id": "field-2",
+      "type": "email",
+      "label": "Email Address",
+      "name": "email",
+      "placeholder": "your.email@example.com",
+      "required": true,
+      "validation": {
+        "required": true,
+        "pattern": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$"
+      }
+    },
+    {
+      "id": "field-3",
+      "type": "phone",
+      "label": "Phone Number",
+      "name": "phone",
+      "placeholder": "+1 (555) 123-4567",
+      "required": false
+    },
+    {
+      "id": "field-4",
+      "type": "select",
+      "label": "Subject",
+      "name": "subject",
+      "required": true,
+      "options": [
+        { "value": "general", "label": "General Inquiry" },
+        { "value": "support", "label": "Technical Support" },
+        { "value": "sales", "label": "Sales" },
+        { "value": "partnership", "label": "Partnership" }
+      ]
+    },
+    {
+      "id": "field-5",
+      "type": "textarea",
+      "label": "Message",
+      "name": "message",
+      "placeholder": "Please describe your inquiry...",
+      "required": true,
+      "rows": 5,
+      "validation": {
+        "required": true,
+        "minLength": 10,
+        "maxLength": 1000
+      }
+    },
+    {
+      "id": "field-6",
+      "type": "checkbox",
+      "label": "I agree to the terms and conditions",
+      "name": "agreement",
+      "required": true
+    },
+    {
+      "id": "field-7",
+      "type": "switch",
+      "label": "Subscribe to newsletter",
+      "name": "newsletter",
+      "required": false
+    }
+  ],
+  "settings": {
+    "submitButtonText": "Send Message",
+    "cancelButtonText": "Clear",
+    "showLabels": true,
+    "labelPosition": "top",
+    "theme": "light"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "formmorf",
+  "version": "1.0.0",
+  "description": "Enterprise React Form Builder Library",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel run dev",
+    "build": "pnpm -r run build",
+    "test": "pnpm -r run test"
+  },
+  "keywords": ["react", "form", "builder", "drag-drop"],
+  "author": "Mohammad Kaif Kazi",
+  "license": "MIT"
+}

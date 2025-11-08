@@ -1,0 +1,138 @@
+import React, { useContext } from 'react';
+import { useSortable } from '@dnd-kit/sortable';
+import { CSS } from '@dnd-kit/utilities';
+import { FieldDefinition } from '../types';
+import { FieldRenderer } from './FieldRenderer';
+import { useFormStore } from '../store/formStore';
+import { IconRenderer } from './IconRenderer';
+import { DragStateContext } from './DndWrapper';
+import { ConditionalSettingsModal } from './ConditionalSettingsModal';
+import { DropIndicator } from './DropIndicator';
+
+interface SortableFieldProps {
+  field: FieldDefinition;
+  index: number;
+}
+
+export const SortableField: React.FC<SortableFieldProps> = ({ field, index }) => {
+  const { selectedFieldId, selectField, removeField, duplicateField } = useFormStore();
+  const [showConditionsModal, setShowConditionsModal] = React.useState(false);
+  const isSelected = selectedFieldId === field.id;
+  const dragState = useContext(DragStateContext);
+
+  // Check if field has conditions
+  const hasConditions = !!(field.conditions?.show || field.conditions?.hide);
+  const conditionCount = (field.conditions?.show?.length || 0) + (field.conditions?.hide?.length || 0);
+
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    transform,
+    transition,
+    isDragging,
+    isOver,
+  } = useSortable({
+    id: field.id,
+    data: {
+      type: 'existing-field',
+      fieldId: field.id,
+      index,
+    },
+  });
+
+  // Show drop indicator when dragging a new field over this field
+  const showDropIndicator = isOver && dragState.isDraggingNewField;
+
+  const style = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+    opacity: isDragging ? 0.5 : 1,
+  };
+
+  const handleSelect = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    selectField(field.id);
+  };
+
+  const handleRemove = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    removeField(field.id);
+  };
+
+  const handleDuplicate = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    duplicateField(field.id);
+  };
+
+  const handleSettings = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setShowConditionsModal(true);
+  };
+
+  return (
+    <>
+      <DropIndicator isVisible={showDropIndicator} message="Drop here to insert" />
+
+      <div
+        ref={setNodeRef}
+        style={style}
+        className={`sortable-field ${isSelected ? 'selected' : ''}`}
+        onClick={handleSelect}
+      >
+        {/* Condition Badge */}
+        {hasConditions && (
+          <div className="field-condition-badge">
+            <span className="field-condition-badge-icon">
+              <IconRenderer icon="settings" />
+            </span>
+            {conditionCount} {conditionCount === 1 ? 'rule' : 'rules'}
+          </div>
+        )}
+
+        <div className="field-controls">
+          <button
+            className="drag-handle"
+            {...attributes}
+            {...listeners}
+            title="Drag to reorder"
+          >
+            <IconRenderer icon="drag_indicator" />
+          </button>
+          <button
+            className="field-action"
+            onClick={handleDuplicate}
+            title="Duplicate field"
+          >
+            <IconRenderer icon="content_copy" />
+          </button>
+          <button
+            className={`field-action settings ${hasConditions ? 'has-conditions' : ''}`}
+            onClick={handleSettings}
+            title={hasConditions ? `Conditional settings (${conditionCount} ${conditionCount === 1 ? 'rule' : 'rules'})` : 'Conditional settings'}
+          >
+            <IconRenderer icon="settings" />
+          </button>
+          <button
+            className="field-action delete"
+            onClick={handleRemove}
+            title="Remove field"
+          >
+            <IconRenderer icon="delete" />
+          </button>
+        </div>
+
+        <div className="field-content">
+          <FieldRenderer field={field} readonly />
+        </div>
+      </div>
+
+      {showConditionsModal && (
+        <ConditionalSettingsModal
+          field={field}
+          onClose={() => setShowConditionsModal(false)}
+        />
+      )}
+    </>
+  );
+};

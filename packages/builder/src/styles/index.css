@@ -1,0 +1,83 @@
+/* ========================================
+   FormMorf Main Styles Entry Point
+   ======================================== */
+
+/* Import CSS Variables */
+@import './variables.css';
+
+/* Import Component Styles */
+@import '../FormBuilder/FormBuilder.css';
+@import '../FormViewer/FormViewer.css';
+
+/* ========================================
+   Global Resets & Base Styles
+   ======================================== */
+
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Form elements base styles using CSS variables */
+.fm-root {
+  font-family: var(--fm-font-sans);
+  font-size: var(--fm-text-base);
+  line-height: var(--fm-leading-normal);
+  color: var(--fm-text-primary);
+  background-color: var(--fm-bg-primary);
+}
+
+/* Utility classes using CSS variables */
+.fm-text-xs { font-size: var(--fm-text-xs); }
+.fm-text-sm { font-size: var(--fm-text-sm); }
+.fm-text-base { font-size: var(--fm-text-base); }
+.fm-text-lg { font-size: var(--fm-text-lg); }
+.fm-text-xl { font-size: var(--fm-text-xl); }
+
+.fm-font-normal { font-weight: var(--fm-font-normal); }
+.fm-font-medium { font-weight: var(--fm-font-medium); }
+.fm-font-semibold { font-weight: var(--fm-font-semibold); }
+.fm-font-bold { font-weight: var(--fm-font-bold); }
+
+/* Spacing utilities */
+.fm-m-0 { margin: var(--fm-spacing-0); }
+.fm-m-1 { margin: var(--fm-spacing-1); }
+.fm-m-2 { margin: var(--fm-spacing-2); }
+.fm-m-3 { margin: var(--fm-spacing-3); }
+.fm-m-4 { margin: var(--fm-spacing-4); }
+
+.fm-p-0 { padding: var(--fm-spacing-0); }
+.fm-p-1 { padding: var(--fm-spacing-1); }
+.fm-p-2 { padding: var(--fm-spacing-2); }
+.fm-p-3 { padding: var(--fm-spacing-3); }
+.fm-p-4 { padding: var(--fm-spacing-4); }
+
+/* Shadow utilities */
+.fm-shadow-sm { box-shadow: var(--fm-shadow-sm); }
+.fm-shadow-md { box-shadow: var(--fm-shadow-md); }
+.fm-shadow-lg { box-shadow: var(--fm-shadow-lg); }
+
+/* Border radius utilities */
+.fm-rounded-none { border-radius: var(--fm-radius-none); }
+.fm-rounded-sm { border-radius: var(--fm-radius-sm); }
+.fm-rounded { border-radius: var(--fm-radius-base); }
+.fm-rounded-md { border-radius: var(--fm-radius-md); }
+.fm-rounded-lg { border-radius: var(--fm-radius-lg); }
+
+/* Transition utilities */
+.fm-transition-fast {
+  transition-duration: var(--fm-transition-fast);
+  transition-timing-function: var(--fm-ease-in-out);
+}
+
+.fm-transition {
+  transition-duration: var(--fm-transition-base);
+  transition-timing-function: var(--fm-ease-in-out);
+}
+
+.fm-transition-slow {
+  transition-duration: var(--fm-transition-slow);
+  transition-timing-function: var(--fm-ease-in-out);
+}
