@@ -48,5 +48,9 @@ temp/
 # Markdown files
 *.md
 
+# But allow package READMEs
+!packages/*/README.md
+!README.md
+
 # Claude documentation
 .claude/
